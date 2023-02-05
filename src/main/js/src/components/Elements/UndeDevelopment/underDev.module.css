@@ -1,0 +1,36 @@
+.wrap {
+    display: flex; /* or inline-flex */
+    flex-direction: column; /* or usually or row */
+    justify-content: space-between;
+    align-items: center;
+
+    height: 100%;
+    width: 100%;
+    padding: 2rem;
+}
+
+.logo {
+    -ms-transform: rotate(-3deg); /* IE 9 */
+    -webkit-transform: rotate(-3deg); /* Safari */
+    transform: rotate(-3deg);
+    padding-top: 20px;
+    font-family: "Kaushan Script", cursive;
+    color: var(--red);
+    font-size: 36px;
+    padding: 10px;
+    opacity: 0.75;
+}
+
+.mainText {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 600px;
+    color: black;
+    opacity: 0.75;
+    text-decoration: underline;
+}
+
+.siteFooter {
+    color: var(--dark);
+    font-size: 0.875em;
+}

@@ -1,0 +1,114 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    min-width: 380px;
+}
+/* Side pane - Class Details */
+.MentorHeader {
+    display: flex;
+    border: none;
+    align-items: center;
+}
+
+.subjectsContainer {
+    display: grid;
+    grid-template-columns: max-content;
+    column-gap: 5px;
+}
+.subjectsContainer > span {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5rem;
+}
+.subjectsContainer > span > p {
+    color: var(--dark);
+}
+.CourseIconContainer {
+    /* border: 1px solid var(--orange);
+    background-color: #fdf2e2; */
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+}
+.MentorBriefContainer {
+    display: flex;
+    padding: 0.75rem;
+}
+.MentorBrief {
+    display: grid;
+    grid-template-columns: minmax(min-content, 6rem) 1fr;
+    column-gap: 1rem;
+    row-gap: 0.5rem;
+    margin: 1rem;
+    font-weight: 500;
+}
+.MentorBrief > p:nth-child(2n + 1) {
+    font-size: var(--font-smaller);
+    color: var(--grey-2);
+    text-transform: uppercase;
+}
+.MentorBrief > p:nth-child(2n) {
+    font-size: var(--font-small);
+    color: var(--blue);
+}
+.RowContainer {
+    min-height: 18rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.timingRow,
+.timingRowHeader {
+    display: grid;
+    grid-template-columns: minmax(100px, 5rem) 1fr 1fr;
+}
+.timingRowHeader > p {
+    margin: 1rem 0 0 0;
+    font-weight: 500;
+}
+.timingRow .confirmFormContainer {
+    min-width: 510px;
+    min-height: 330px;
+    background: #ffffff;
+    border: 1px solid #e2e2e2;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 14px;
+
+    padding: 1rem 1.5rem;
+}
+.timingRow > p:first-child {
+    font-size: var(--font-small);
+    color: var(--grey-2);
+    text-transform: uppercase;
+}
+.timingRow > p {
+    font-size: 1rem;
+    color: var(--blue);
+    text-transform: uppercase;
+}
+.confirmFormContainer > p {
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 36px;
+    color: var(--dark);
+}
+
+.confirmFormContainer .FormButtonControls {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+}
+.buttonSpan {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: auto;
+    margin: 1rem;
+}

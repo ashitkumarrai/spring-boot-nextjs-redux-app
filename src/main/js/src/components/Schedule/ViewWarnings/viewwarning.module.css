@@ -1,0 +1,146 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    min-width: 380px;
+}
+
+.MentorHeader {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+}
+
+.MentorSubHeader {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+    color: #7e919a;
+    font-size: 12px;
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #b7c3c9;
+}
+
+.closeIcon {
+    place-items: center;
+    font-size: 1.25rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-left: 5rem;
+    color: #b7c3c9;
+}
+
+.MentorHeader > span {
+    display: grid;
+    place-items: center;
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+
+.MentorHeader > p {
+    font-size: var(--font-large);
+    font-weight: 600;
+    color: var(--dark);
+}
+.Body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 2rem;
+    width: 100%;
+    align-items: center;
+}
+
+.conflictDiv {
+    border: #ff6a00 solid 1px;
+    border-radius: 4px;
+    width: 100%;
+    min-height: max-content;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+    background-color: #f1f6f9;
+}
+.warningText{
+    font-size: var(--font-smaller);
+    letter-spacing: 1px;
+    font-weight: 500;
+    color: var(--dark);
+}
+.details {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content:center;
+}
+.customWrapper4DatePicker {
+    width: 10rem;
+}
+
+.dateInput {
+    background: transparent;
+    border: none;
+    border-radius: 6px;
+    height: auto;
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--blue);
+}
+.dateInput:focus-visible {
+    outline: none;
+    border: none;
+}
+.dateInput.datePlaceholder {
+    content: "Date";
+    color: var(--placeholder-color);
+    font-size: 0.875rem;
+    font-weight: 400;
+    letter-spacing: 0.01rem;
+}
+.conflictClasses {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.conflictSection {
+    display: flex;
+    align-items: center;
+}
+
+.classInfo {
+    color: #b7c3c9;
+    font-size: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width:7rem;
+}
+
+.editIcon {
+    margin-left: 0.5rem;
+    cursor: pointer;
+}
+
+.info {
+    margin-left: 0.5rem;
+    width: 30%;
+    font-weight: 500;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+}
+.Input {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    align-items: center;
+    margin: 1rem 0;
+}

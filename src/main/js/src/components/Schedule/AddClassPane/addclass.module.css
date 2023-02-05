@@ -1,0 +1,62 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    min-width: 380px;
+    height: 100%;
+}
+
+.MentorHeader {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid var(--grey-2);
+    gap: 1rem;
+}
+.MentorHeader > span {
+    display: grid;
+    place-items: center;
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+.MentorHeader > p {
+    font-size: var(--font-large);
+    font-weight: 600;
+    color: var(--dark);
+}
+.Body {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    align-items: center;
+}
+.disabledDatePicker {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    height: auto;
+    width: 100%;
+    padding: 0.85rem 1rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text);
+    background-color: var(--bg-disabled);
+    border: 1px solid var(--border-disabled);
+    cursor: not-allowed;
+}
+.Input {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    align-items: center;
+    margin: 0.5rem 0;
+}
+/* .Input > input{
+    padding: .65rem .7rem;
+} */
+.buttonControls {
+    margin-top: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}

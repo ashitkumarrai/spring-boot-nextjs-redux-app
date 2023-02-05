@@ -1,0 +1,29 @@
+.confirmFormContainer {
+    min-width:345px;
+    min-height: max-content;
+    background: #ffffff;
+    border: 1px solid #e2e2e2;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 14px;
+
+    padding: 1rem 1.5rem;
+}
+.confirmFormContainer > div:first-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.confirmFormContainer > div:first-child p:first-child {
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 36px;
+    color: var(--dark);
+}
+
+.confirmFormContainer .FormButtonControls {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+}

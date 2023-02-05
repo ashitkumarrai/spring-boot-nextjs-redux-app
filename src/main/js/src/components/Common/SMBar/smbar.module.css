@@ -1,0 +1,21 @@
+.sidebar {
+    height: 100%;
+    width: 100%;
+    background-color: #0D0F1680;
+    opacity: 1;
+    padding: 1rem 0.75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.sidebar ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    list-style: none;
+    padding-left: 0;
+}
+.sidebar ul li:active {
+    transform: scale(0.97);
+}

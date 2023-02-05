@@ -1,0 +1,28 @@
+.root {
+    display: grid;
+    grid-template-rows: 7.1vh 92.9vh;
+    grid-template-columns: 15% 80% 5%;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+.root > div:first-child {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+.unroot {
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+}
+.overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+@media (orientation: portrait) {
+    .root {
+        position: relative;
+    }
+}

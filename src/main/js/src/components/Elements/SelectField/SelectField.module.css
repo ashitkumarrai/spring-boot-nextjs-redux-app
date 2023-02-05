@@ -1,0 +1,254 @@
+.dropdown {
+    --text: var(--dark);
+    --text-size: var(--font-smaller);
+    --label-color: #7e919a;
+    --label-error: #ff5858;
+    --placeholder-color: var(--grey-1);
+
+    --bg: #fff;
+    --bg-disabled: var(--grey-1);
+    --bg-error: #fdf2f2;
+
+    --border: var(--grey-2);
+    --border-disabled: var(--grey-2);
+    --focus: #0481fe;
+
+    --list-text-color: var(--grey-3);
+    --list-text-size: var(--font-smaller);
+    --list-text-weight: 400;
+    --list-hover: var(--blue);
+
+    height: auto;
+    margin: 0.25rem 0;
+    border-radius: 6px;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid var(--border);
+    text-align: center;
+    outline: none !important;
+    position: relative;
+    user-select: none;
+    /* width: max-content;
+    min-width: 10.5rem; */
+}
+
+.dropdown:hover {
+    cursor: pointer;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.08);
+}
+.dropdownDisabled {
+    border: 1px solid var(--border-disabled);
+    background-color: var(--bg-disabled);
+    cursor: not-allowed;
+}
+.dropdownDisabled:hover {
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.dropdown .innerDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: var(--text);
+
+    font-size: var(--text-size);
+}
+.innerDiv p{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: keep-all;
+    white-space: nowrap;
+    width: 100%;
+}
+.dropdown div svg {
+    margin-left: 0.56rem;
+    color: #9ea2b1;
+    font-size: 1rem;
+}
+.dropdown .ul {
+    position: absolute;
+    /*     position: fixed; */
+
+    min-width: min-content;
+    max-width: 100%;
+    width: max-content;
+
+    border: 1px solid #e0dcf1;
+    background: #fff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
+
+    max-height: 10rem;
+    overflow-y: auto;
+
+    list-style: none;
+    /*  top: 0; */
+    /*     left: 0; */
+    padding: 0;
+    margin: 0;
+    z-index: 101;
+}
+.dropdown ul::-webkit-scrollbar {
+    width: 0.25rem;
+}
+.dropdown ul::-webkit-scrollbar-track {
+    background: #fff;
+}
+.dropdown ul::-webkit-scrollbar-thumb {
+    background: var(--orange);
+    border-radius: 5px;
+    width: 0.125rem;
+}
+.dropdown ul:first-child {
+    padding-top: 0.3em;
+}
+.dropdown ul li {
+    display: flex;
+    align-items: center;
+
+    color: var(--list-text-color);
+    font-size: var(--list-text-size);
+    font-weight: var(--list-text-weight);
+    list-style: none;
+    line-height: 2;
+
+    padding: 0 0.99rem;
+    cursor: pointer;
+    margin: 0.5rem 0;
+    text-align: left;
+    word-break: word-break;
+}
+
+.dropdown li:hover {
+    color: var(--list-hover);
+}
+/* With Search */
+.dropdown .innerDiv > input {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+.dropdown .innerDiv > input:focus-visible {
+    outline: none;
+}
+.placeholderText {
+    color: var(--grey-2);
+    font-size: 0.875rem;
+    font-weight: 400;
+}
+/* Sub select */
+.subOpdropdown .ul {
+    position: absolute;
+    /*     position: fixed; */
+
+    min-width: min-content;
+    max-width: 100%;
+    width: max-content;
+
+    border: 1px solid #e0dcf1;
+    background: #fff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
+
+    max-height: 10rem;
+    overflow-y: auto;
+
+    list-style: none;
+    /*  top: 0; */
+    /*     left: 0; */
+    padding: 0;
+    margin: 0;
+    z-index: 101;
+}
+.subOpdropdown .ul > li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.subOpdropdown ul li span {
+    display: flex;
+    align-items: center;
+}
+.subOpdropdown ul li svg {
+    font-size: 1.25rem;
+    margin: 0 0.5rem 0 0;
+}
+.subOpdropdown .InnerUL {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.subOpdropdown .InnerUL .subListItem {
+    align-items: center;
+
+    color: var(--list-text-color);
+    font-size: 0.625rem;
+    font-weight: var(--list-text-weight);
+    list-style: none;
+    line-height: 2;
+
+    padding: 0 0.99rem;
+    cursor: pointer;
+    margin: 0.5rem 0;
+    text-align: left;
+    white-space: nowrap;
+}
+.subOpdropdown .subListItem svg {
+    font-size: 1rem;
+    margin: 0 0.5rem 0 0;
+}
+.selected {
+    color: var(--blue) !important;
+    font-weight: 600 !important;
+}
+
+.subListItem {
+    display: flex;
+}
+
+/* Mutli select */
+
+.multiselectOption {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    gap: 0.5rem;
+}
+
+.selectedOptionList {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    width: 5rem;
+}
+.selectedOptionList > span {
+    color: var(--grey-1);
+    display: flex;
+    align-items: center;
+}
+.selectedOptionList > svg {
+    color: var(--grey-1);
+}
+.selectedOptionBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: max-content;
+    border-radius: 0.25rem;
+    background-color: #e2e8f0;
+    padding: 0.45rem;
+}
+.selectedOptionBox ul {
+    list-style: none;
+}
+.selectedText {
+    color: #000;
+    font: 1rem;
+    display: grid;
+    place-items: center;
+}
+/* End of Mutli select */

@@ -1,0 +1,20 @@
+.container {
+    position: absolute;
+    min-width: 470px;
+    width: 30%;
+    height: 100%;
+    padding: 1rem;
+    background: #ffffff;
+    overflow-y: auto;
+}
+.container::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+.container::-webkit-scrollbar-thumb {
+    background-color: #62646b;
+}
+
+.container::-webkit-scrollbar-track {
+    background-color: #dfe4ec;
+}

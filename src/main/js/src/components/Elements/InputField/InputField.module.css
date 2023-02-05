@@ -1,0 +1,111 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    position: relative;
+    margin: 0.89rem 0;
+
+    --text: #000;
+    --label-color: #7e919a;
+    --label-error: #ff5858;
+    --placeholder-color: #b7c3c9;
+
+    --bg: #fff;
+    --bg-disabled: var(--grey-1);
+    --bg-error: #fdf2f2;
+
+    --border: #b7c3c9;
+    --border-disabled: var(--grey-2);
+    --focus: #0481fe;
+}
+.container.top {
+    flex-direction: column;
+    align-items: flex-start;
+}
+.container > label {
+    font-weight: 500;
+    color: var(--label-color);
+    padding: 0.02rem 0.5rem;
+    font-size: 1rem;
+}
+.container.top > label {
+    margin-bottom: 0.25rem;
+}
+.container > input {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    height: auto;
+    width: 70%;
+    padding: 0.85rem 1rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text);
+}
+.container.top > input {
+    width: 100%;
+}
+.container > input:placeholder-shown {
+    color: var(--placeholder-color);
+    font-size: 0.875rem;
+    font-weight: 400;
+    letter-spacing: 0.01rem;
+}
+.container > input[type="date" i]:placeholder-shown {
+    color: var(--placeholder-color);
+    font-size: 0.875rem;
+    font-weight: 400;
+}
+.container > input[type="number"]::-webkit-outer-spin-button,
+.container > input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    -moz-appearance: textfield;
+}
+/* states */
+.container > label:focus-visible {
+    color: var(--focus);
+}
+.container > input:hover {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.08);
+}
+.container > input:focus-visible {
+    outline: var(--focus) solid;
+}
+.container > input:disabled {
+    background-color: var(--bg-disabled);
+    border: 1px solid var(--border-disabled);
+    cursor: not-allowed;
+}
+
+.password-reveal {
+    background: transparent;
+    cursor: pointer;
+    margin-left: -10%;
+    align-self: center;
+}
+
+/* Description */
+.desc {
+    color: var(--grey-3);
+    font-weight: 400;
+    font-size: 0.625rem;
+    margin: 0.25rem 0.5rem;
+}
+
+/* Error */
+.container.error > label {
+    color: var(--label-error);
+}
+
+.container.error > input {
+    background: var(--bg-error);
+    border: 1px solid var(--label-error);
+}
+.container.error .desc {
+    color: var(--label-error);
+    font-weight: 500;
+    letter-spacing: 0.03rem;
+}

@@ -1,0 +1,113 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    min-width: 380px;
+}
+/* Side Pane - Mentor Details */
+.MentorHeader {
+    display: flex;
+    border: none;
+}
+.MentorSubjectText {
+    color: var(--blue) !important;
+}
+.MentorBriefContainer {
+    display: flex;
+    padding: 0.75rem;
+}
+
+.MentorAvatar {
+    width: 5rem;
+    height: 5rem;
+    min-width: 80px;
+    min-height: 80px;
+}
+.MentorName {
+    font-size: var(--font-large);
+    font-weight: 600;
+    color: var(--dark);
+    display: grid;
+    place-items: center;
+    margin-left: 1rem;
+}
+
+.MentorBrief {
+    display: grid;
+    grid-template-columns: minmax(min-content, 6rem) 1fr;
+    column-gap: 1rem;
+    row-gap: 0.5rem;
+    margin: 1rem;
+    font-weight: 500;
+}
+
+.MentorBrief > p:nth-child(2n + 1) {
+    font-size: var(--font-smaller);
+    color: var(--grey-2);
+    text-transform: uppercase;
+}
+.MentorBrief > p:nth-child(2n) {
+    font-size: var(--font-small);
+    color: var(--blue);
+}
+.centresContainer {
+    display: grid;
+    grid-template-columns: repeat(3, max-content);
+    column-gap: 5px;
+}
+.subjectsContainer {
+    display: grid;
+    grid-template-columns: max-content;
+    column-gap: 5px;
+}
+.subjectsContainer > span {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5rem;
+}
+.subjectsContainer > span > p {
+    color: var(--dark);
+}
+.timingContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+}
+.timingContainer > p {
+    color: var(--grey-3);
+    font-size: 1rem;
+}
+.timingContainer > span {
+    height: 18rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.timingContainer .slot {
+    display: grid;
+    align-items: center;
+    grid-template-columns: minmax(95px, 5rem) repeat(2, max-content);
+    gap: 0.5rem;
+    column-gap: 1rem;
+}
+.timingContainer .slot > p:first-child {
+    font-size: var(--font-small);
+    color: var(--grey-2);
+    text-transform: uppercase;
+}
+.timingContainer .slot > p {
+    font-size: 1rem;
+    color: var(--blue);
+    text-transform: uppercase;
+}
+
+.buttonSpan {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: auto;
+    margin: 1rem;
+}
